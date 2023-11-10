@@ -67,7 +67,7 @@ class _TodoListPageState extends State<TodoListPage> {
                       child: const Text('Add'),
                       onPressed: () {
                         if (_controller.text.isNotEmpty) {
-                          var todo = TodoItem(_controller.text, false);
+                          var todo = TodoItem(_controller.text, true);
                           _todoService.addItem(todo);
                           _controller.clear();
                           Navigator.pop(context);
